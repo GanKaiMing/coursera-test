@@ -1,0 +1,51 @@
+<!doctype html> 
+<html>
+<head> 
+	<meta charset="utf-8"> 
+	<title>Introduction to CSS</title> 
+	<style>
+
+		/* "*" selector is select every element and apply the changes to every element in the html page */
+		* {
+			box-sizing: border-box; /* This will make the box length to be 300px which takes into account of the the length of margin, padding and border */
+		  	/* box-sizing: content-box - is the opposite of border-box where only the content takes up 300px */
+		  	margin: 0; /* This is to remove the default margin and padding from chrome */
+			padding: 0;
+		}
+		body {
+		  	background-color: gray;
+		}
+		#box {
+		  	background-color: blue;
+		  	/* top right bottom left or u can declare 10px itself */
+		  	padding: 10px 10px 10px 10px; 
+		  	border: 5px solid black;
+		  	/* Cummulative margin is not applied vertically because "h1" has defined margin-bottom 30px and box is defined margin-top 50px. Therefore, the larger margin which is 50px is taken */
+		  	/* Cummulative margin is applied only to horizontal margins which are margin-left and margin-right values will be added up */
+		  	width: 300px;
+		  	margin-top: 50px; 
+		  	/* if the height of the content is too small that it could not fit everything in, the "overflow" property is used */
+		  	/*
+		  		1. visible - will show everything (default option)
+		  		2. hidden - clip it where the remaining parts will be cut off
+		  		3. auto - put scroll bars when it is needed. Only applies to verticle scrolling
+		  		4. scroll - scroll both way horizontally and vertically
+		  	*/
+		  	height: 50px; 
+		  	overflow: auto;
+		}
+		#content {
+		  	background-color: #90EE90; /*green*/
+		}
+		h1 {
+		  	margin-bottom: 30px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Box Model</h1>
+	<div id="box">
+	  	<div id="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+	</div>
+</body>
+</html>
