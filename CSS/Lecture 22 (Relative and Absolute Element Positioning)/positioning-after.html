@@ -1,0 +1,61 @@
+<!doctype html> 
+<html>
+<head> 
+	<meta charset="utf-8"> 
+	<title>Introduction to CSS</title> 
+	<style>
+		* {
+		  box-sizing: border-box;
+		  margin: 0;
+		  padding: 0;
+		}
+		h1 {
+		  margin-bottom: 15px;
+		}
+
+		div#container {
+		  background-color: #00FFFF;
+		  position: relative;
+		  top: 60px;
+		}
+		p {
+		  width: 50px;
+		  height: 50px;
+		  border: 1px solid black;
+		  margin-bottom: 15px;
+		}
+		#p1 {
+		  background-color: #A52A2A;
+		  /* By default, all elements are set as postion:  "static" except for HTML. Static elements are not affected by top, bottom, left and right properties */
+		  /* When the position is set to "relative" the browser will still think that p1 is positioned in the orginal spot even though p1 has already been moved to a new location. Therefore, any gap left by the element will not be adjusted */
+		  position: relative;
+		  top: 65px; /* From the top 65px */
+		  left: 65px; /* From the left 65px */
+		}
+		#p2 {
+		  background-color: #DEB887;
+		}
+		#p3 {
+		  background-color: #5F9EA0;
+		  /* When position is set to "absolute", the element has been taken out from the normal document flow. Therefore, u need to achor the element and make it relative to its ancestor. If it does not have positioned ancestors, it uses the document body and moves along with page scrolling */
+		  /* To solve that, in "div#container" set the position to "relative" */
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		}
+		#p4 {
+		  background-color: #FF7F50;
+		}
+	</style>
+</head>
+<body>
+	<h1>Positioning Elements</h1>
+
+	<div id="container">
+	  <p id="p1">p1</p>
+	  <p id="p2">p2</p>
+	  <p id="p3">p3</p>
+	  <p id="p4">p4</p>
+	</div>
+</body>
+</html>

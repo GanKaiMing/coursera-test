@@ -1,0 +1,45 @@
+<!doctype html> 
+<html>
+<head> 
+	<meta charset="utf-8"> 
+	<!-- This is to tell some versions of internet explorer to use the latest compatibility version of its rendering engine -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Introduction to CSS</title> 
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+		<!-- Bootstrap Grid must be inside a container (or a container-fluid) -->
+		<!-- The Row class creates horizontal group of columns. Meaning the columns collapse an interact with each other as a group but independantly from columns in another row -->
+		<!-- Column class definition: col-SIZE-SPAN. The "SIZE" is a screen width range identifier exp: "MD" for medium, "LG" for large. Columns will collapse below that width unless another rule applies. The "SPAN" is how many column elements should span. Values is from 1 through 12 (Standard rule)-->
+
+		<!-- class="container-fluid" means there will be padding by the side -->
+		<div class="container-fluid">
+	    <div class="row">
+	      <div class="col-md-4 col-sm-6">Col 1</div>
+	      <div class="col-md-4 col-sm-6">Col 2</div>
+	      <div class="col-md-4 col-sm-6">Col 3</div>
+	    </div>
+
+	    <div class="row">
+	      <div class="col-md-4 col-sm-6">Col 1</div>
+	      <div class="col-md-4 col-sm-6">Col 2</div>
+	      <div class="col-md-4 col-sm-6">Col 3</div>
+	    </div>
+
+			<!--"xs" means it is horizontal at all times. The screen width is disregarded. Meaning, it will not collapse -->
+	    <div class="row">
+	      <div class="col-xs-6">Col 1</div>
+	      <div class="col-xs-6">Col 2</div>
+	      <div class="col-xs-6">Col 3</div>
+	    </div>
+	  </div>
+
+  	<!-- jQuery (Bootstrap JS plugins depend on it) -->
+  	<script src="js/jquery-1.11.3.min.js"></script>
+  	<script src="js/bootstrap.min.js"></script>
+  	<script src="js/script.js"></script>
+</body>
+</html>
